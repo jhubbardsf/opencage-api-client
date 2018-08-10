@@ -1,6 +1,6 @@
-const helpers = require('./helpers');
-const buildQueryString = require('./qs');
-const fetch = require('./fetch');
+import { isUndefinedOrNull, isUndefinedOrEmpty } from './helpers';
+import buildQueryString from './qs';
+import fetch from './fetch';
 
 const OPEN_CAGE_DATA_URL = 'https://api.opencagedata.com/geocode/v1/json';
 
@@ -21,7 +21,7 @@ const buildParams = input => input;
  */
 const geocode = input =>
   new Promise((resolve, reject) => {
-    if (helpers.isUndefinedOrNull(input)) {
+    if (isUndefinedOrNull(input)) {
       const error = new Error('missing input parameters');
       error.response = {
         status: {
@@ -34,11 +34,11 @@ const geocode = input =>
     }
     const params = buildParams(input);
     let endpoint = OPEN_CAGE_DATA_URL;
-    if (helpers.isUndefinedOrEmpty(params.proxyURL)) {
-      if (helpers.isUndefinedOrEmpty(params.key)) {
+    if (isUndefinedOrEmpty(params.proxyURL)) {
+      if (isUndefinedOrEmpty(params.key)) {
         params.key = process.env.OCD_API_KEY;
       }
-      if (helpers.isUndefinedOrEmpty(params.key)) {
+      if (isUndefinedOrEmpty(params.key)) {
         const error = new Error('missing API key');
         error.response = {
           status: {
@@ -59,5 +59,5 @@ const geocode = input =>
     fetch(url, resolve, reject);
   });
 
-module.exports = geocode;
-module.exports.buildParams = buildParams;
+export default geocode;
+export { buildParams };

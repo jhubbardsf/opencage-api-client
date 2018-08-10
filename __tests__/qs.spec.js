@@ -1,4 +1,4 @@
-const buildQueryString = require('../src/qs');
+import buildQueryString from '../src/qs';
 
 describe('buildQueryString', () => {
   test('function exists', () => {

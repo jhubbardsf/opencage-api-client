@@ -1,4 +1,4 @@
-const opencage = require('../');
+import * as opencage from '../';
 
 describe('Module', () => {
   test('Library exists', () => {

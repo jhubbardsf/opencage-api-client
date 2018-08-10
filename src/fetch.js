@@ -1,5 +1,7 @@
-require('es6-promise').polyfill();
-require('fetch-everywhere');
+import 'fetch-everywhere';
+import es6Promise from 'es6-promise';
+
+es6Promise.polyfill();
 
 const checkStatus = response => {
   if (response.status >= 200 && response.status < 300) {
@@ -28,7 +30,5 @@ const fetch = (url, resolve, reject) => {
     });
 };
 
-module.exports = fetch;
-module.exports.fetchUrl = fetchUrl;
-module.exports.parseJSON = parseJSON;
-module.exports.checkStatus = checkStatus;
+export default fetch;
+export { fetchUrl, parseJSON, checkStatus };

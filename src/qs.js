@@ -1,4 +1,4 @@
-const helpers = require('./helpers');
+import * as helpers from './helpers';
 
 const buildQueryString = input => {
   if (helpers.isUndefinedOrNull(input)) {
@@ -9,4 +9,4 @@ const buildQueryString = input => {
     .join('&');
 };
 
-module.exports = buildQueryString;
+export default buildQueryString;

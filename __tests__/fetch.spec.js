@@ -1,4 +1,4 @@
-const fetch = require('../src/fetch');
+import fetch, { fetchUrl, parseJSON, checkStatus } from '../src/fetch';
 
 describe('fetch', () => {
   test('Library exists', () => {
@@ -8,7 +8,7 @@ describe('fetch', () => {
   describe('fetchUrl function', () => {
     test('returns an object', () => {
       const url = 'https://google.com';
-      const p = fetch.fetchUrl(url);
+      const p = fetchUrl(url);
       expect(typeof p).toEqual('object');
     });
   });
@@ -54,7 +54,7 @@ describe('fetch', () => {
       const response = {
         json: () => data,
       };
-      expect(fetch.parseJSON(response)).toEqual(data);
+      expect(parseJSON(response)).toEqual(data);
     });
   });
 
@@ -64,7 +64,7 @@ describe('fetch', () => {
         status: 200,
         statusText: 'OK',
       };
-      expect(fetch.checkStatus(response)).toBe(response);
+      expect(checkStatus(response)).toBe(response);
     });
     test('status 403', () => {
       const response = {
@@ -72,7 +72,7 @@ describe('fetch', () => {
         statusText: 'Forbidden',
       };
       expect(() => {
-        fetch.checkStatus(response);
+        checkStatus(response);
       }).toThrow();
     });
   });

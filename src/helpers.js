@@ -32,9 +32,4 @@ const isUndefinedOrEmpty = param =>
 const isUndefinedOrNull = param =>
   typeof param === 'undefined' || param === null;
 
-module.exports = {
-  isNumber,
-  isArray,
-  isUndefinedOrEmpty,
-  isUndefinedOrNull,
-};
+export { isNumber, isArray, isUndefinedOrEmpty, isUndefinedOrNull };

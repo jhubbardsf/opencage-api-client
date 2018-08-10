@@ -1,4 +1,4 @@
-const opencage = require('../');
+import * as opencage from '../';
 
 describe('integration tests', () => {
   if (process.env.CI) {
@@ -6,6 +6,9 @@ describe('integration tests', () => {
     test.skip('CI : skipping integration tests');
     return;
   }
+
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // 10 second timeout
+
   test('if environment variable is set', () => {
     // In JavaScript, there are six falsy values:
     // false, 0, '', null, undefined, and NaN.

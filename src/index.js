@@ -1,5 +1,4 @@
-const geocode = require('./geocode');
+import geocode from './geocode';
 
-module.exports = {
-  geocode,
-};
+// eslint-disable-next-line
+export { geocode };
