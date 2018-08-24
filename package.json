@@ -5,6 +5,7 @@
   "main": "dist/opencage-api.node.js",
   "unpkg": "dist/opencage-api.min.js",
   "browser": "dist/opencage-api.min.js",
+  "module": "index.js",
   "lint-staged": {
     "*.{js}": [
       "prettier --write",
