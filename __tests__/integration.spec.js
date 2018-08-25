@@ -1,4 +1,4 @@
-import * as opencage from '..';
+import * as opencage from '../src';
 
 describe('integration tests', () => {
   if (process.env.CI) {

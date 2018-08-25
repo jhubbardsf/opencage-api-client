@@ -2,7 +2,7 @@ const path = require('path');
 
 const browserConfig = {
   target: 'web', // <=== can be omitted as default is 'web'
-  entry: './src/index.js',
+  entry: './src/opencage.js',
   devtool: 'source-map',
   module: {
     rules: [
@@ -22,7 +22,7 @@ const browserConfig = {
 
 const nodeConfig = {
   target: 'node',
-  entry: './index.js',
+  entry: './src/index.js',
   optimization: {
     minimize: false,
   },

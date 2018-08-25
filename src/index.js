@@ -1,6 +1,11 @@
-import geocode from './geocode';
-import pkg from '../package.json';
+import dotenv from 'dotenv';
+import { geocode, version } from './opencage';
 
-const { version } = pkg;
+dotenv.config();
+// const opencage = {
+//   geocode,
+//   version,
+// };
+// export default opencage;
 
 export { geocode, version };
