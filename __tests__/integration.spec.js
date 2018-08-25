@@ -3,7 +3,9 @@ import * as opencage from '..';
 describe('integration tests', () => {
   if (process.env.CI) {
     // eslint-disable-next-line
-    test.skip('CI : skipping integration tests');
+    test.skip('CI : skipping integration tests', () => {
+      expect(true).toBeTruthy();
+    });
     return;
   }
 
