@@ -1,4 +1,6 @@
 import geocode from './geocode';
+import pkg from '../package.json';
 
-// eslint-disable-next-line
-export { geocode };
+const { version } = pkg;
+
+export { geocode, version };

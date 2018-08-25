@@ -16,7 +16,7 @@ const buildParams = input => input;
 
 /**
  * geocode
- * @param  {Object} input   query parameters
+ * @param  {Object} input   query parameters as opencage API see https://opencagedata.com/api#forward
  * @return {Promise}        a promise resolved by the json format API payload
  */
 const geocode = input =>
@@ -60,4 +60,6 @@ const geocode = input =>
   });
 
 export default geocode;
+
+// for unit tests
 export { buildParams };

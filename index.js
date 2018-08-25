@@ -1,7 +1,11 @@
 import dotenv from 'dotenv';
-import { geocode } from './src';
+import { geocode, version } from './src';
 
 dotenv.config();
+// const opencage = {
+//   geocode,
+//   version,
+// };
+// export default opencage;
 
-// eslint-disable-next-line
-export { geocode };
+export { geocode, version };
