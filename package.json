@@ -2,10 +2,11 @@
   "name": "opencage-api-client",
   "version": "0.3.0",
   "description": "An OpenCageData Geocoder API client library for node and browsers (UMD)",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "dist/opencage-api.node.js",
+  "omain": "index.js",
   "unpkg": "dist/opencage-api.min.js",
-  "browser": "dist/opencage-api.min.js",
+  "aaaa_browser": "dist/opencage-api.min.js",
+  "aaaa_module": "index.js",
   "lint-staged": {
     "*.{js}": [
       "prettier --write",
@@ -26,7 +27,7 @@
     "prebuild": "npm run test",
     "precommit": "lint-staged",
     "pretest": "npm run lint",
-    "test": "jest --env=node --coverage",
+    "test": "jest --coverage",
     "test:watch": "npm test -- --watch"
   },
   "keywords": [
@@ -47,7 +48,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.21.0",
+    "eslint-plugin-jest": "^21.22.0",
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
     "jest": "^23.5.0",
