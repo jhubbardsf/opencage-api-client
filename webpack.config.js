@@ -23,6 +23,9 @@ const browserConfig = {
 const nodeConfig = {
   target: 'node',
   entry: './index.js',
+  optimization: {
+    minimize: false,
+  },
   module: {
     rules: [
       {
