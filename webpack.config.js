@@ -36,7 +36,7 @@ const nodeConfig = {
   },
   output: {
     libraryTarget: 'commonjs',
-    filename: 'opencage-api.node.js',
+    filename: 'opencage-api.cjs.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };

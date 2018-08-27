@@ -2,10 +2,10 @@
   "name": "opencage-api-client",
   "version": "0.3.0",
   "description": "An OpenCageData Geocoder API client library for node and browsers (UMD)",
-  "main": "dist/opencage-api.node.js",
+  "module": "src/index.js",
+  "main": "dist/opencage-api.cjs.js",
   "unpkg": "dist/opencage-api.min.js",
   "browser": "dist/opencage-api.min.js",
-  "_module": "src/index.js",
   "lint-staged": {
     "*.{js}": [
       "prettier --write",
